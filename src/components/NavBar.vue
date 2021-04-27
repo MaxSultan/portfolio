@@ -21,7 +21,7 @@ export default {};
   justify-content: flex-start;
   align-items: center;
   z-index: 999;
-  /* background-color: #899878; */
+  background-color: #121113;
   opacity: 0.9;
 }
 .nav-logo{

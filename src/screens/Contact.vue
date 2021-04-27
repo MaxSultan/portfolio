@@ -40,6 +40,7 @@ hr {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  height: 100vh
 }
 .contact-form-container {
   display: flex;

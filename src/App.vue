@@ -1,10 +1,8 @@
 <template>
   <div id="app">
+    <NavBar />
     <div class="background-image">
-      <div class="background-fade">
-        <NavBar />
-        <router-view />
-      </div>
+      <router-view />
     </div>
   </div>
 </template>
@@ -36,14 +34,8 @@ export default {
   padding: 0px;
 }
 .background-image {
-  background-image: url("./assets/binary.jpeg");
-  /* background: linear-gradient(#fff, #e6e6e6); */
+  background-image: url("./assets/Matrix-Background.png");
   background-size: 100% 100%;
   min-height: 100vh;
-}
-.background-fade{
-  background-color:#98a297;
-  min-height: 100vh;
-  opacity: 0.9;
 }
 </style>
