@@ -1,5 +1,5 @@
 <template>
-  <form class="form-background">
+  <form class="form-background" @submit.prevent="sendEmail">
     <div class="form-row">
       <div class="form-input-wrapper half-w">
         <label for="first name">first name</label>
@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import emailjs from "emailjs-com";
+
 export default {
   data() {
     return {
@@ -44,6 +46,26 @@ export default {
       email: "",
       phoneNumber: "",
     };
+  },
+  computed: {
+    fullName() {
+      return `${this.firstName} ${this.lastName}`;
+    },
+  },
+  methods: {
+    sendEmail(e) {
+        emailjs.send('service_mztgizm', 'template_dvct2gt', {
+          from_name: this.fullName,
+          message: this.message,
+          email: this.email,
+          phoneNumber: this.phoneNumber
+        }).then(() => {
+          //TODO turn this into a message that pops up
+          console.log("Thanks for your message, we will be in contact soon!")
+        }).catch(() => {
+          console.log("Something went wrong")
+        });
+    },
   },
 };
 </script>
@@ -135,7 +157,7 @@ input:focus-visible {
   animation: slideDown 1s once 0s ease-in;
   animation-fill-mode: forwards;
 }
-label{
+label {
   position: relative;
   top: 8px;
 }

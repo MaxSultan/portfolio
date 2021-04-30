@@ -1,7 +1,7 @@
 <template>
   <div class="aspect-ratio-box">
     <div class="background-image aspect-ratio-content">
-      <NavBar/>
+      <NavBar />
       <div class="contact-background">
         <Title title="Contact me" />
         <section class="contact-form-container">
@@ -40,5 +40,4 @@ export default {
   justify-content: center;
   align-items: center;
 }
-
 </style>

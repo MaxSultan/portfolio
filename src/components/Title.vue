@@ -31,7 +31,7 @@ hr {
   background-color: white;
   height: 1.5px;
 }
-.nowrap{
-    white-space: nowrap;
+.nowrap {
+  white-space: nowrap;
 }
 </style>

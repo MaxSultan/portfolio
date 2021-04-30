@@ -4,7 +4,9 @@
       <NavBar />
       <div class="float-left full-vh centered">
         <div class="center-row half-vh space-evenly container-thin">
-          <h1 class="main-text">I <br />am a <br />Full Stack <br />Developer</h1>
+          <h1 class="main-text">
+            I <br />am a <br />Full Stack <br />Developer
+          </h1>
           <p>
             This is some more text about me. Its gonna be super interesting, but
             tight now, this is it. So much cool stuff, What a developer. Wow, I
@@ -15,7 +17,7 @@
       </div>
       <div class="float-right">
         <!-- <div class="profile-image-container"> -->
-          <img src="../assets/IMG_9404-min.png" class="profile-image"/>
+        <img src="../assets/IMG_9404-min.png" class="profile-image" />
         <!-- </div> -->
       </div>
     </section>
@@ -60,7 +62,7 @@ export default {
   box-shadow: 2.5px 3px 2px #121113;
   cursor: pointer;
 }
-.profile-image{
+.profile-image {
   /* position: absolute;
   top: 0;
   left: 0;
@@ -70,9 +72,9 @@ export default {
   height: 75.3vh;
   position: relative;
   top: 9.2vh;
-  left:-3.8vw;
+  left: -3.8vw;
 }
-.profile-image-container{
+.profile-image-container {
   height: 0;
   overflow: hidden;
   padding-top: 138.83%;

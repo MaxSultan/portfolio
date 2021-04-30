@@ -10,7 +10,6 @@
 </template>
 
 <script>
-
 export default {};
 </script>
 
@@ -24,27 +23,27 @@ export default {};
   z-index: 999;
   height: 5.5294vh;
 }
-.nav-logo{
-    justify-self: flex-start;
-    height: 100%;
-    width: auto;
+.nav-logo {
+  justify-self: flex-start;
+  height: 100%;
+  width: auto;
 }
-.nav-item, .nav-logo{
-    margin-right: 2vw;
+.nav-item,
+.nav-logo {
+  margin-right: 2vw;
 }
-.nav-item{
-    color: white;
+.nav-item {
+  color: white;
 }
-.nav-item:active{
-    color: red;
+.nav-item:active {
+  color: red;
 }
-.router-link-exact-active{
-    border-bottom: 1px solid white;
-    padding-bottom: 3px;
+.router-link-exact-active {
+  border-bottom: 1px solid white;
+  padding-bottom: 3px;
 }
-.nav-link{
-    color: white;
-    text-decoration: none;
+.nav-link {
+  color: white;
+  text-decoration: none;
 }
-
 </style>

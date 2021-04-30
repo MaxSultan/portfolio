@@ -5,8 +5,18 @@
 </template>
 
 <script>
+import{ init } from 'emailjs-com';
+
 export default {
   name: "App",
+  methods:{
+    initEmailJs(){
+      init("user_eebF3SXZYGQGZbE057VxV");
+    }
+  },
+  mounted(){
+    this.initEmailJs()
+  }
 };
 </script>
 
@@ -48,8 +58,8 @@ export default {
 .full-vh {
   height: 94%;
 }
-.half-vh{
-  height:50%;
+.half-vh {
+  height: 50%;
 }
 .space-evenly {
   display: flex;
@@ -70,13 +80,13 @@ export default {
 .continer-wide {
   width: 80%;
 }
-.aspect-ratio-box{
+.aspect-ratio-box {
   height: 0;
   overflow: hidden;
   padding-top: 135.983264%;
   background: white;
   position: relative;
-  width:100%;
+  width: 100%;
 }
 .aspect-ratio-content {
   position: absolute;
@@ -85,7 +95,7 @@ export default {
   width: 100%;
   height: 100%;
 }
-.main-text{
+.main-text {
   font-size: 2.5vw;
 }
 </style>
