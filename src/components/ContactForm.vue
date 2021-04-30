@@ -1,31 +1,32 @@
 <template>
   <form class="form-background" @submit.prevent="sendEmail">
+    <h1 v-show="status.onScreen"> {{ status.message }}</h1>
     <div class="form-row">
       <div class="form-input-wrapper half-w">
         <label for="first name">first name</label>
-        <input name="first name" v-model="firstName" />
+        <input name="first name" v-model="formData.firstName" />
       </div>
       <div class="form-input-wrapper half-w">
         <label for="last name">last name</label>
-        <input name="last name" v-model="lastName" />
+        <input name="last name" v-model="formData.lastName" />
       </div>
     </div>
     <div class="form-row">
       <div class="form-input-wrapper">
         <label for="message">message</label>
-        <input name="message" v-model="message" />
+        <input name="message" v-model="formData.message" />
       </div>
     </div>
     <div class="form-row">
       <div class="form-input-wrapper">
         <label for="email">email</label>
-        <input name="email" v-model="email" />
+        <input name="email" v-model="formData.email" />
       </div>
     </div>
     <div class="form-row">
       <div class="form-input-wrapper">
         <label for="phoneNumber">phone number</label>
-        <input name="phoneNumber" v-model="phoneNumber" />
+        <input name="phoneNumber" v-model="formData.phoneNumber" />
       </div>
     </div>
     <div class="form-row">
@@ -40,11 +41,17 @@ import emailjs from "emailjs-com";
 export default {
   data() {
     return {
-      firstName: "",
-      lastName: "",
-      message: "",
-      email: "",
-      phoneNumber: "",
+      formData: {
+        firstName: "",
+        lastName: "",
+        message: "",
+        email: "",
+        phoneNumber: "",
+      },
+      status: {
+        message: "",
+        onScreen: false,
+      }
     };
   },
   computed: {
@@ -53,17 +60,42 @@ export default {
     },
   },
   methods: {
+    resetForm() {
+      this.formData.firstName = "";
+      this.formData.lastName = "";
+      this.formData.message = "";
+      this.formData.email = "";
+      this.formData.phoneNumber = "";
+    },
+    showStatusMessage(text) {
+      this.status.message = text;
+      this.status.onScreen = true;
+    },
+    hideStatusMessage(){
+      this.status.onScreen = false;
+      this.status.message = "";
+    },
     sendEmail(e) {
-        emailjs.send('service_mztgizm', 'template_dvct2gt', {
+      emailjs
+        .send("service_mztgizm", "template_dvct2gt", {
           from_name: this.fullName,
-          message: this.message,
-          email: this.email,
-          phoneNumber: this.phoneNumber
-        }).then(() => {
+          message: this.formData.message,
+          email: this.formData.email,
+          phoneNumber: this.formData.phoneNumber,
+        })
+        .then(() => {
           //TODO turn this into a message that pops up
-          console.log("Thanks for your message, we will be in contact soon!")
-        }).catch(() => {
-          console.log("Something went wrong")
+          this.resetForm();
+          this.showStatusMessage("Thanks for your message, we will be in contact soon!")
+          setTimeout(()=> {
+            this.hideStatusMessage();
+          }, 4000)
+        })
+        .catch(() => {
+          this.showStatusMessage("Something went wrong.")
+          setTimeout(()=> {
+            this.hideStatusMessage();
+          }, 4000)
         });
     },
   },
