@@ -53,17 +53,18 @@ form {
   width: 70%;
 }
 .form-background {
-  background-color: #899878;
+  background-color: #98a297;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: space-between;
   color: white;
   padding-left: 15%;
   padding-right: 15%;
   padding-top: 10%;
   padding-bottom: 10%;
-  width: 33vw;
+  width: 71.25vw;
+  height: 60vh;
 }
 .form-input-wrapper {
   display: flex;
@@ -92,7 +93,7 @@ input {
   border: none;
   border-radius: 40px;
   color: white;
-  background-color: #98a297;
+  background-color: #80857f;
   box-shadow: 2.5px 3px 2px #121113;
   cursor: pointer;
 }

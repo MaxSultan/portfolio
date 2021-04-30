@@ -20,13 +20,13 @@ export default {};
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: transparent;
   z-index: 999;
-  background-color: #121113;
-  opacity: 0.9;
+  height: 5.5294vh;
 }
 .nav-logo{
     justify-self: flex-start;
-    height: 6vh;
+    height: 100%;
     width: auto;
 }
 .nav-item, .nav-logo{

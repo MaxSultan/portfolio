@@ -1,20 +1,12 @@
 <template>
   <div id="app">
-    <NavBar />
-    <div class="background-image">
-      <router-view />
-    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
-import NavBar from "@/components/NavBar";
-
 export default {
   name: "App",
-  components: {
-    NavBar,
-  },
 };
 </script>
 
@@ -34,8 +26,66 @@ export default {
   padding: 0px;
 }
 .background-image {
-  background-image: url("./assets/Matrix-Background.png");
-  background-size: 100% 100%;
-  min-height: 100vh;
+  background-image: url("./assets/binary-falling-min.png");
+  /* background-size: contain; */
+  /* width: 100%;
+  height: auto; */
+  z-index: 1;
+}
+.float-left {
+  float: left;
+  width: 50%;
+}
+.float-right {
+  float: right;
+  width: 50%;
+}
+.center-row {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.full-vh {
+  height: 94%;
+}
+.half-vh{
+  height:50%;
+}
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+.centered {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container-thin {
+  width: 40%;
+}
+.container-med {
+  width: 60%;
+}
+.continer-wide {
+  width: 80%;
+}
+.aspect-ratio-box{
+  height: 0;
+  overflow: hidden;
+  padding-top: 135.983264%;
+  background: white;
+  position: relative;
+  width:100%;
+}
+.aspect-ratio-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.main-text{
+  font-size: 2.5vw;
 }
 </style>
