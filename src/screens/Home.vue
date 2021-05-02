@@ -12,13 +12,12 @@
             tight now, this is it. So much cool stuff, What a developer. Wow, I
             am impressed.
           </p>
-          <button class="contact-button">Contact me</button>
+          <button class="contact-button" @click="$router.push({ path: 'contact' })">Contact me</button>
         </div>
       </div>
-      <div class="float-right">
-        <!-- <div class="profile-image-container"> -->
+      <div class="float-right side-by-side">
         <img src="../assets/IMG_9404-min.png" class="profile-image" />
-        <!-- </div> -->
+        <SocialLinks />
       </div>
     </section>
     <div class="aspect-ratio-box">
@@ -32,10 +31,13 @@
 <script>
 import Title from "@/components/Title";
 import NavBar from "@/components/NavBar";
+import SocialLinks from "@/components/SocialLinks";
+
 export default {
   components: {
     Title,
     NavBar,
+    SocialLinks,
   },
 };
 </script>
@@ -63,22 +65,16 @@ export default {
   cursor: pointer;
 }
 .profile-image {
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; */
   max-width: 62vw;
   height: 75.3vh;
   position: relative;
   top: 9.2vh;
-  left: -3.8vw;
+  left: 5.65vw;
 }
-.profile-image-container {
-  height: 0;
-  overflow: hidden;
-  padding-top: 138.83%;
-  background: white;
-  position: relative;
+
+.side-by-side{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>
