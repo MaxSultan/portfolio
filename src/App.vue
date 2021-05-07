@@ -21,6 +21,8 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Corben&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corben&family=Poppins:wght@100;200&display=swap');
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -97,5 +99,11 @@ export default {
 }
 .main-text {
   font-size: 2.5vw;
+}
+.corben{
+  font-family: "Corben";
+}
+.poppins{
+  font-family: "Poppins";
 }
 </style>

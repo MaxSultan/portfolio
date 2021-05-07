@@ -1,5 +1,5 @@
 <template>
-  <div class="footer-background">
+  <div class="footer-background poppins">
       <div class="column flex-column">
           <h2>Social Media</h2>
           <a href="https://www.instagram.com/maxsultan1/?hl=en">Instagram</a>

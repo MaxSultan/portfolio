@@ -1,5 +1,5 @@
 <template>
-  <form class="form-background" @submit.prevent="sendEmail">
+  <form class="form-background poppins" @submit.prevent="sendEmail">
     <h1 v-show="status.onScreen"> {{ status.message }}</h1>
     <div class="form-row">
       <div class="form-input-wrapper half-w">

@@ -5,15 +5,15 @@
       <NavBar />
       <div class="float-left full-vh centered">
         <div class="center-row half-vh space-evenly container-thin">
-          <h1 class="main-text">
+          <h1 class="main-text corben">
             I <br />am a <br />Full Stack <br />Developer
           </h1>
-          <p>
+          <p class="poppins">
             This is some more text about me. Its gonna be super interesting, but
             tight now, this is it. So much cool stuff, What a developer. Wow, I
             am impressed.
           </p>
-          <button class="contact-button" @click="$router.push({ path: 'contact' })">Contact me</button>
+          <button class="contact-button poppins" @click="$router.push({ path: 'contact' })">Contact me</button>
         </div>
       </div>
       <div class="float-right side-by-side">
@@ -22,7 +22,7 @@
       </div>
     </section>
     <div class="aspect-ratio-box">
-      <div class="background-image aspect-ratio-content">
+      <div class="background-image aspect-ratio-content padding-top-title">
         <Title title="My Projects" />
       </div>
     </div>
@@ -80,5 +80,8 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.padding-top-title{
+  padding-top: 25vh;
 }
 </style>

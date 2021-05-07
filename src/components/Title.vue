@@ -1,7 +1,7 @@
 <template>
   <header class="page-title">
     <hr />
-    <h1 class="nowrap">{{ title }}</h1>
+    <h1 class="nowrap corben">{{ title }}</h1>
     <hr />
   </header>
 </template>
