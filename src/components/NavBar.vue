@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul class="nav-list">
-      <img src="@/assets/logo.png" class="nav-logo"/>
+      <img src="@/assets/computer-logo-no-back-min.png" class="nav-logo" alt="a computer logo"/>
       <li class="nav-item"><router-link to="/" class="nav-link">Home</router-link></li>
       <li class="nav-item"><router-link to=/about class="nav-link">About me</router-link></li>
       <li class="nav-item"><router-link to=/contact class="nav-link">Contact me</router-link></li>
@@ -22,6 +22,9 @@ export default {};
   background-color: transparent;
   z-index: 999;
   height: 5.5294vh;
+  position: relative;
+  top: 25px;
+  left: 50px;
 }
 .nav-logo {
   justify-self: flex-start;

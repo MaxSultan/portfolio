@@ -1,14 +1,18 @@
 <template>
-  <div class="aspect-ratio-box">
-    <div class="background-image aspect-ratio-content">
-      <NavBar />
-      <div class="contact-background">
-        <Title title="Contact me" />
-        <section class="contact-form-container">
-          <ContactForm />
-        </section>
+  <div>
+    <a name="top"></a>
+    <div class="aspect-ratio-box">
+      <div class="background-image aspect-ratio-content">
+        <NavBar />
+        <div class="contact-background">
+          <Title title="Contact me" />
+          <section class="contact-form-container">
+            <ContactForm />
+          </section>
+        </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -16,12 +20,14 @@
 import ContactForm from "@/components/ContactForm";
 import Title from "@/components/Title";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 export default {
   components: {
     ContactForm,
     Title,
     NavBar,
+    Footer,
   },
 };
 </script>

@@ -7,22 +7,22 @@
     </li> -->
     <li>
       <a href="https://www.instagram.com/maxsultan1/?hl=en" target="_blank">
-        <img src="../assets/icon-01-min.png" />
+        <img src="../assets/icon-01-min.png" alt="Instagram icon" />
       </a>
     </li>
     <li>
       <a href="https://www.facebook.com/maxamillionludacris" target="_blank">
-        <img src="../assets/icon-02-min.png" />
+        <img src="../assets/icon-02-min.png" alt="Facebook icon" />
       </a>
     </li>
     <li>
       <a href="https://www.linkedin.com/in/maxsultan/" target="_blank">
-        <img src="../assets/icon-03-min.png" />
+        <img src="../assets/icon-03-min.png" alt="LinkedIn icon"/>
       </a>
     </li>
     <li>
       <a href="https://github.com/MaxSultan" target="_blank">
-        <img src="../assets/icon-04-min.png" />
+        <img src="../assets/icon-04-min.png" alt="Github icon" />
       </a>
     </li>
   </ul>

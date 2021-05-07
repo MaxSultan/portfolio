@@ -1,5 +1,6 @@
 <template>
   <div>
+    <a name="top"></a>
     <section class="landing">
       <NavBar />
       <div class="float-left full-vh centered">
@@ -16,7 +17,7 @@
         </div>
       </div>
       <div class="float-right side-by-side">
-        <img src="../assets/IMG_9404-min.png" class="profile-image" />
+        <img src="../assets/IMG_9404-min.png" class="profile-image" alt="image of Max Sultan and dog"/>
         <SocialLinks />
       </div>
     </section>
@@ -25,6 +26,7 @@
         <Title title="My Projects" />
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -32,12 +34,14 @@
 import Title from "@/components/Title";
 import NavBar from "@/components/NavBar";
 import SocialLinks from "@/components/SocialLinks";
+import Footer from "@/components/Footer";
 
 export default {
   components: {
     Title,
     NavBar,
     SocialLinks,
+    Footer,
   },
 };
 </script>
