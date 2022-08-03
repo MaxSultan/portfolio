@@ -17,7 +17,7 @@
     </li>
     <li>
       <a href="https://www.linkedin.com/in/maxsultan/" target="_blank">
-        <img src="../assets/icon-03-min.png" alt="LinkedIn icon"/>
+        <img src="../assets/icon-03-min.png" alt="LinkedIn icon" />
       </a>
     </li>
     <li>
@@ -35,9 +35,9 @@ export default {
       link1: "www.google.com",
       link2: "www.google.com",
       link3: "www.google.com",
-      link4: "www.google.com",
+      link4: "www.google.com"
     };
-  },
+  }
 };
 </script>
 

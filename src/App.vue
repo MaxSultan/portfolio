@@ -5,24 +5,31 @@
 </template>
 
 <script>
-import{ init } from 'emailjs-com';
+import { init } from "emailjs-com";
 
 export default {
   name: "App",
-  methods:{
-    initEmailJs(){
+  methods: {
+    initEmailJs() {
       init("user_eebF3SXZYGQGZbE057VxV");
     }
   },
-  mounted(){
-    this.initEmailJs()
+  mounted() {
+    this.initEmailJs();
   }
 };
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Corben&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Corben&family=Poppins:wght@100;200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Corben&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corben&family=Poppins:wght@100;200&display=swap");
+body {
+  height: 100%;
+  overflow: overlay;
+}
+html {
+  height: 100%;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -30,7 +37,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 0px;
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
 }
 * {
@@ -39,9 +46,11 @@ export default {
 }
 .background-image {
   background-image: url("./assets/binary-falling-min.png");
-  /* background-size: contain; */
-  /* width: 100%;
-  height: auto; */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  aspect-ratio: 3/4;
+  width: 100%;
   z-index: 1;
 }
 .float-left {
@@ -82,28 +91,28 @@ export default {
 .continer-wide {
   width: 80%;
 }
-.aspect-ratio-box {
+/* .aspect-ratio-box {
   height: 0;
   overflow: hidden;
   padding-top: 135.983264%;
   background: white;
   position: relative;
   width: 100%;
-}
-.aspect-ratio-content {
+} */
+/* .aspect-ratio-content {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
 .main-text {
   font-size: 2.5vw;
 }
-.corben{
+.corben {
   font-family: "Corben";
 }
-.poppins{
+.poppins {
   font-family: "Poppins";
 }
 </style>

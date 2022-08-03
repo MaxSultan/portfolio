@@ -20,11 +20,8 @@ export default {};
   justify-content: flex-start;
   align-items: center;
   background-color: transparent;
-  z-index: 999;
   height: 5.5294vh;
-  position: relative;
-  top: 25px;
-  left: 50px;
+  padding: 25px 50px;
 }
 .nav-logo {
   justify-self: flex-start;

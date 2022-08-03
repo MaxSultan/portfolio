@@ -13,17 +13,23 @@
             tight now, this is it. So much cool stuff, What a developer. Wow, I
             am impressed.
           </p>
-          <button class="contact-button poppins" @click="$router.push({ path: 'contact' })">Contact me</button>
+          <router-link to="/contact" class="contact-button poppins">
+            Contact me
+          </router-link>
         </div>
       </div>
       <div class="float-right side-by-side">
-        <img src="../assets/IMG_9404-min.png" class="profile-image" alt="image of Max Sultan and dog"/>
+        <img
+          src="../assets/IMG_9404-min.png"
+          class="profile-image"
+          alt="Max Sultan and dog"
+        />
         <SocialLinks />
       </div>
     </section>
     <div class="aspect-ratio-box">
-      <div class="background-image aspect-ratio-content padding-top-title">
-        <Title title="My Projects" />
+      <div class="background-image padding-top-title">
+        <Projects />
       </div>
     </div>
     <Footer />
@@ -31,18 +37,18 @@
 </template>
 
 <script>
-import Title from "@/components/Title";
+import Projects from "@/components/Projects";
 import NavBar from "@/components/NavBar";
 import SocialLinks from "@/components/SocialLinks";
 import Footer from "@/components/Footer";
 
 export default {
   components: {
-    Title,
+    Projects,
     NavBar,
     SocialLinks,
-    Footer,
-  },
+    Footer
+  }
 };
 </script>
 
@@ -67,21 +73,22 @@ export default {
   background-color: white;
   box-shadow: 2.5px 3px 2px #121113;
   cursor: pointer;
+  text-decoration: none;
 }
 .profile-image {
-  max-width: 62vw;
-  height: 75.3vh;
+  max-width: 31.3vw;
+  aspect-ratio: 1/0.99;
   position: relative;
   top: 9.2vh;
   left: 5.65vw;
 }
 
-.side-by-side{
+.side-by-side {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.padding-top-title{
-  padding-top: 25vh;
+.padding-top-title {
+  padding-top: 25%;
 }
 </style>
