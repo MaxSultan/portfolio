@@ -1,6 +1,8 @@
 <template>
-  <form class="form-background poppins" @submit.prevent="sendEmail">
-    <h1 v-show="status.onScreen"> {{ status.message }}</h1>
+  <form ref="form" class="form-background poppins" @submit.prevent="sendEmail">
+    <div class="notification" v-show="status.onScreen">
+      <p>{{ status.message }}</p>
+    </div>
     <div class="form-row">
       <div class="form-input-wrapper half-w">
         <label for="first name">first name</label>
@@ -46,18 +48,18 @@ export default {
         lastName: "",
         message: "",
         email: "",
-        phoneNumber: "",
+        phoneNumber: ""
       },
       status: {
         message: "",
-        onScreen: false,
+        onScreen: false
       }
     };
   },
   computed: {
     fullName() {
       return `${this.firstName} ${this.lastName}`;
-    },
+    }
   },
   methods: {
     resetForm() {
@@ -71,34 +73,35 @@ export default {
       this.status.message = text;
       this.status.onScreen = true;
     },
-    hideStatusMessage(){
+    hideStatusMessage() {
       this.status.onScreen = false;
       this.status.message = "";
     },
     sendEmail(e) {
       emailjs
-        .send("service_mztgizm", "template_dvct2gt", {
-          from_name: this.fullName,
-          message: this.formData.message,
-          email: this.formData.email,
-          phoneNumber: this.formData.phoneNumber,
-        })
+        .sendForm(
+          "service_llf6wqz",
+          "template_dvct2gt",
+          this.$refs.form,
+          "user_eebF3SXZYGQGZbE057VxV"
+        )
         .then(() => {
-          //TODO turn this into a message that pops up
           this.resetForm();
-          this.showStatusMessage("Thanks for your message, we will be in contact soon!")
-          setTimeout(()=> {
+          this.showStatusMessage(
+            "Thanks for your message, we will be in contact soon!"
+          );
+          setTimeout(() => {
             this.hideStatusMessage();
-          }, 4000)
+          }, 4000);
         })
         .catch(() => {
-          this.showStatusMessage("Something went wrong.")
-          setTimeout(()=> {
+          this.showStatusMessage("Something went wrong.");
+          setTimeout(() => {
             this.hideStatusMessage();
-          }, 4000)
+          }, 4000);
         });
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -192,5 +195,16 @@ input:focus-visible {
 label {
   position: relative;
   top: 8px;
+}
+.notification {
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  padding: 32px 64px;
+  color: white;
+  background-color: blue;
+  border-radius: 8px;
+  margin: 10% 20%;
 }
 </style>
